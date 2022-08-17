@@ -307,6 +307,9 @@ void function UpdateLoadout( entity player )
 
     // Shifter
     player.GiveOffhandWeapon( "mp_ability_shifter", OFFHAND_LEFT )
+    // Firestar
+    if(weapon.weapon == "mp_weapon_grenade_sonar" )
+        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_TITAN_CENTER, [] )
 }
 
 void function OnWinnerDetermined()
