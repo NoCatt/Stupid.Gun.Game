@@ -305,8 +305,8 @@ void function UpdateLoadout( entity player )
 			player.GiveOffhandWeapon( "melee_pilot_emptyhanded", OFFHAND_MELEE )
 	}
 
-    // Grapple
-    player.GiveOffhandWeapon( "mp_ability_grapple", OFFHAND_LEFT )
+    // Shifter
+    player.GiveOffhandWeapon( "mp_ability_shifter", OFFHAND_LEFT )
 }
 
 void function OnWinnerDetermined()
