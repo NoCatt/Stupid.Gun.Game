@@ -147,7 +147,7 @@ void function OnPlayerDisconnected(entity player)
 
 void function OnPlayerRespawned( entity player )
 {
-    StimPlayer(player, 4)
+    StatusEffect_AddTimed( player, eStatusEffect.speed_boost, 0.4, 4.25, 0.25)
 	UpdateLoadout( player )
 	thread OnPlayerRespawned_Threaded( player )
 }
@@ -179,7 +179,7 @@ void function OnPlayerKilled( entity victim, entity attacker, var damageInfo )
         // Heal & stim attacker after kill
         if (IsAlive(attacker)) {
             attacker.SetHealth(attacker.GetMaxHealth())
-            StimPlayer(attacker, 4)
+            StatusEffect_AddTimed( attacker, eStatusEffect.speed_boost, 0.4, 4.25, 0.25)
         }
 
 		if ( DamageInfo_GetDamageSourceIdentifier( damageInfo ) != eDamageSourceId.melee_pilot_emptyhanded )
