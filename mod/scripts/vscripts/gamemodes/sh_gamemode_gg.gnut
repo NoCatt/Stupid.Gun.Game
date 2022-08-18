@@ -163,7 +163,7 @@ void function CreateGamemodeGG()
 
 	 // file.weapons.append(ggDoubletake)
 	    file.weapons.append(ggKraber)
-	    file.weapons.append(ggLongbow)
+	 // file.weapons.append(ggLongbow)
         file.weapons.append(ggPlasma)
 
 	    file.weapons.append(ggRe45)
