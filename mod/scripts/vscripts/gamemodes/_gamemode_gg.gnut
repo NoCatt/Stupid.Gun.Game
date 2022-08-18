@@ -295,20 +295,21 @@ void function UpdateLoadout( entity player )
 			
 		player.SetActiveWeaponByName( player.GetOffhandWeapon( OFFHAND_MELEE ).GetWeaponClassName() ) // Let the player use the melee in the primary slot, and then force equip it. Effectively gives them an empty hand.
 	}
-	else
-	{
-		player.GiveWeapon( weapon.weapon, weapon.mods )
+    else
+    {
+        player.GiveWeapon( weapon.weapon, weapon.mods )
 
-		if( playerHSNames.find( player.GetPlayerName() ) == -1 )
-			player.GiveOffhandWeapon( "melee_pilot_kunai", OFFHAND_MELEE )
-		else
-			player.GiveOffhandWeapon( "melee_pilot_emptyhanded", OFFHAND_MELEE )
-	}
+        if( playerHSNames.find( player.GetPlayerName() ) == -1 )
+            player.GiveOffhandWeapon( "melee_pilot_kunai", OFFHAND_MELEE )
+        else
+            player.GiveOffhandWeapon( "melee_pilot_emptyhanded", OFFHAND_MELEE )
+    }
 
     // Shifter
+    player.TakeOffhandWeapon( OFFHAND_LEFT )
     player.GiveOffhandWeapon( "mp_ability_shifter", OFFHAND_LEFT )
-	
-	player.TakeOffhandWeapon( OFFHAND_INVENTORY )
+    
+    player.TakeOffhandWeapon( OFFHAND_INVENTORY )
         player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_INVENTORY )
 	
 }
