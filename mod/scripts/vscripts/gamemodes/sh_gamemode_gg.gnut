@@ -111,9 +111,6 @@ void function CreateGamemodeGG()
 	    GunGameWeapon ggMozambique   = { weapon = "mp_weapon_shotgun_pistol",  mods = ["extended_ammo", "pas_fast_reload"], ... }
 	    GunGameWeapon ggWingmanElite = { weapon = "mp_weapon_wingman_n",       mods = ["extended_ammo", "pas_fast_reload"], ... }
 
-	// ordnance
-	    GunGameWeapon ggSatchel	 = { weapon = "mp_weapon_satchel", ... }
-
         // sniper
 	    GunGameWeapon ggDoubletake   = { weapon = "mp_weapon_doubletake",      mods = ["extended_ammo", "pas_fast_ads"], ... }
 	    GunGameWeapon ggKraber       = { weapon = "mp_weapon_sniper",          mods = ["extended_ammo", "pas_fast_ads"], ... }
@@ -136,7 +133,6 @@ void function CreateGamemodeGG()
         file.weapons.append(ggSmartpistol)
         file.weapons.append(ggFlightcoreRockets)
 	file.weapons.append(ggQuadRocket)
-	file.weapons.append(ggSatchel)
 
 	    file.weapons.append(ggCar)
 	    file.weapons.append(ggAlternator)
