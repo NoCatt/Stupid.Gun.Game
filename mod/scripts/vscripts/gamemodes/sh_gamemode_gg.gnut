@@ -61,7 +61,7 @@ void function CreateGamemodeGG()
 
 
         // titan mains
-        GunGameWeapon ggSword        = { weapon = "melee_titan_sword",         offhandSlot = 0, ... }
+        GunGameWeapon ggSword        = { weapon = "melee_titan_sword",         offhandSlot = 2, ... }
         GunGameWeapon ggLeadwall     = { weapon = "mp_titanweapon_leadwall", ... }
         GunGameWeapon ggPlasma       = { weapon = "mp_titanweapon_sniper", ... }
         GunGameWeapon ggParticle     = { weapon = "mp_titanweapon_particle_accelerator", ... }
@@ -70,11 +70,14 @@ void function CreateGamemodeGG()
         GunGameWeapon ggPredator     = { weapon = "mp_titanweapon_predator_cannon", ... }
         GunGameWeapon ggXo16         = { weapon = "mp_titanweapon_xo16_vanguard", ... }
 	GunGameWeapon ggTrippleThread= { weapon = "mp_titanweapon_triplethreat", ... }
-        
+	GunGameWeapon ggQuadRocket   = { weapon = "mp_titanweapon_rocketeer_rocketstream", ... }
+
         //titan abilities
         GunGameWeapon ggWeebWave     = { weapon = "mp_titanweapon_arc_wave",  mods = ["pas_ronin_arcwave", "burn_mod_titan_arc_wave", "dev_mod_low_recharge"],         offhandSlot = 0, ... }                        
-        GunGameWeapon ggShield       = { weapon = "mp_titanweapon_heat_shield",         offhandSlot = 0, ... }
-	GunGameWeapon ggLazor	     = { weapon = "mp_titanweapon_laser_lite", offhandSlot = 0, ...}
+        GunGameWeapon ggShield       = { weapon = "mp_titanweapon_heat_shield",         offhandSlot = 2, ... }
+        GunGameWeapon ggRocketSalvo  = { weapon = "mp_titanweapon_salvo_rockets", offhandSlot = 2, ...}        
+        GunGameWeapon ggFlameWall    = { weapon = "mp_titanweapon_flame_wall", offhandSlot = 2, ...}
+        
                 
         // smg
 	    GunGameWeapon ggCar          = { weapon = "mp_weapon_car",             mods = ["extended_ammo", "pas_fast_reload", "holosight"], ... }
@@ -129,6 +132,7 @@ void function CreateGamemodeGG()
         file.weapons.append(ggArena3)
         file.weapons.append(ggSmartpistol)
         file.weapons.append(ggFlightcoreRockets)
+	file.weapons.append(ggQuadRocket)
 
 	    file.weapons.append(ggCar)
 	    file.weapons.append(ggAlternator)
@@ -173,7 +177,9 @@ void function CreateGamemodeGG()
 	    file.weapons.append(ggTrippleThread)
          
        file.weapons.append(ggWeebWave)
-       file.weapons.append(ggLazor)
+       file.weapons.append(ggRocketSalvo)
+       file.weapons.append(ggFlameWall)
+       file.weapons.append(ggShield)
 
         // Random order til now
         file.weapons.randomize()
@@ -181,7 +187,6 @@ void function CreateGamemodeGG()
         
 	    file.weapons.append(ggChargerifle)
       file.weapons.append(ggSword)
-      file.weapons.append(ggShield)
 	    file.weapons.append(ggPulse)
 	}
 
