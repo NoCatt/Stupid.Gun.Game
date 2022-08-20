@@ -305,12 +305,15 @@ void function UpdateLoadout( entity player )
             player.GiveOffhandWeapon( "melee_pilot_emptyhanded", OFFHAND_MELEE )
     }
 
-    // Shifter
-    player.TakeOffhandWeapon( OFFHAND_LEFT )
+    // Phaseshift 
     player.GiveOffhandWeapon( "mp_ability_shifter", OFFHAND_LEFT )
-    
-    player.TakeOffhandWeapon( OFFHAND_INVENTORY )
-        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_INVENTORY )
+    // Firestar
+    if(weapon.weapon == "mp_weapon_grenade_sonar" )
+        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_TITAN_CENTER, [] )
+    else
+        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_RIGHT )
+    player.TakeOffhandWeapon( OFFHAND_INVENTORY ) 
+    player.GiveOffhandWeapon( "mp_ability_heal", OFFHAND_INVENTORY, [] )
 	
 }
 
