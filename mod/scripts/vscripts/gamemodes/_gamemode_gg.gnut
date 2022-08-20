@@ -312,7 +312,7 @@ void function UpdateLoadout( entity player )
         player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_TITAN_CENTER, [] )
     else
         player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_RIGHT )
-    player.TakeOffhandWeapon( OFFHAND_INVENTORY ) 
+    
 
 	
 }
