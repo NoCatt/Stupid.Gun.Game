@@ -313,20 +313,6 @@ void function UpdateLoadout( entity player )
     else
         player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_RIGHT )
     
-    if(weapon.weapon == "mp_titanweapon_heat_shield" )
-        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_INVENTORY, [] )
-    else
-        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_RIGHT )
-
-    if(weapon.weapon == "mp_titanweapon_salvo_rockets" )
-        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_INVENTORY, [] )
-    else
-        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_RIGHT )
- 
-    if(weapon.weapon == "mp_titanweapon_flame_wall" )
-        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_INVENTORY, [] )
-    else
-        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_RIGHT )	
 }
 
 void function OnWinnerDetermined()
