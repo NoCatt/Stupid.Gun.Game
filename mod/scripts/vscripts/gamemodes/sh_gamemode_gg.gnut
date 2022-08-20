@@ -61,7 +61,7 @@ void function CreateGamemodeGG()
 
 
         // titan mains
-        GunGameWeapon ggSword        = { weapon = "melee_titan_sword",         offhandSlot = 2, ... }
+        GunGameWeapon ggSword        = { weapon = "melee_titan_sword",         offhandSlot = 0, ... }
         GunGameWeapon ggLeadwall     = { weapon = "mp_titanweapon_leadwall", ... }
         GunGameWeapon ggPlasma       = { weapon = "mp_titanweapon_sniper", ... }
         GunGameWeapon ggParticle     = { weapon = "mp_titanweapon_particle_accelerator", ... }
@@ -74,9 +74,9 @@ void function CreateGamemodeGG()
 
         //titan abilities
         GunGameWeapon ggWeebWave     = { weapon = "mp_titanweapon_arc_wave",  mods = ["pas_ronin_arcwave", "burn_mod_titan_arc_wave", "dev_mod_low_recharge"],         offhandSlot = 0, ... }                        
-        GunGameWeapon ggShield       = { weapon = "mp_titanweapon_heat_shield",         offhandSlot = 2, ... }
-        GunGameWeapon ggRocketSalvo  = { weapon = "mp_titanweapon_salvo_rockets", offhandSlot = 2, ...}        
-        GunGameWeapon ggFlameWall    = { weapon = "mp_titanweapon_flame_wall", offhandSlot = 2, ...}
+        GunGameWeapon ggShield       = { weapon = "mp_titanweapon_heat_shield",         offhandSlot = 0, ... }
+        GunGameWeapon ggRocketSalvo  = { weapon = "mp_titanweapon_salvo_rockets", offhandSlot = 0, ...}        
+        GunGameWeapon ggFlameWall    = { weapon = "mp_titanweapon_flame_wall", offhandSlot = 0, ...}
         
                 
         // smg
