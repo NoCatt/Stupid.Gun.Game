@@ -309,9 +309,19 @@ void function UpdateLoadout( entity player )
     player.GiveOffhandWeapon( "mp_ability_shifter", OFFHAND_LEFT )
     // Firestar
     if(weapon.weapon == "mp_weapon_grenade_sonar" )
-        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_TITAN_CENTER, [] )
-    else
-        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_INVENTORY )
+        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_INVENTORY, [] )
+
+   
+	else if(weapon.weapon == "mp_titanweapon_heat_shield" )
+	        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_INVENTORY, [] )
+    
+	else if(weapon.weapon == "mp_titanweapon_arc_wave" )
+	        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_INVENTORY, [] )
+    
+	else if(weapon.weapon == "melee_titan_sword" )
+	        player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_INVENTORY, [] )
+        else
+		player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_RIGHT )
 	
 }
 
