@@ -75,7 +75,10 @@ void function CreateGamemodeGG()
         //titan abilities
         GunGameWeapon ggWeebWave     = { weapon = "mp_titanweapon_arc_wave",  mods = ["pas_ronin_arcwave", "burn_mod_titan_arc_wave", "dev_mod_low_recharge"],         offhandSlot = 0, ... }                        
         GunGameWeapon ggShield       = { weapon = "mp_titanweapon_heat_shield",         offhandSlot = 0, ... }
-                     
+	GunGameWeapon ggBaseClass    = { weapon = "mp_titanweapon_vortex_shield",         offhandSlot = 0, ... }
+	GunGameWeapon ggFlameWall    = { weapon = "mp_titanweapon_flame_wall",         offhandSlot = 0, ... }
+	GunGameWeapon ggRocketSalvo  = { weapon = "mp_titanweapon_salvo_rockets",         offhandSlot = 0, ... }
+ 	
         // smg
 	    GunGameWeapon ggCar          = { weapon = "mp_weapon_car",             mods = ["extended_ammo", "pas_fast_reload", "holosight"], ... }
 	    GunGameWeapon ggAlternator   = { weapon = "mp_weapon_alternator_smg",  mods = ["extended_ammo", "pas_fast_reload"], ... }
@@ -175,7 +178,10 @@ void function CreateGamemodeGG()
          
        file.weapons.append(ggWeebWave)
        file.weapons.append(ggShield)
-
+       file.weapons.append(ggBaseClass)			
+       file.weapons.append(ggFlameWall)	
+       file.weapons.append(ggRocketSalvo)
+       
         // Random order til now
         file.weapons.randomize()
         
