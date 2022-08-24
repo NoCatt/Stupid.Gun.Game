@@ -1,8 +1,10 @@
 global function GamemodeGG_Init
 
 array<string> playerHSNames = [] //players that have HouseFlies enabled
+table<string, int> playerHSKills
 array<string> adminNames = ["admin1", "admin2"] // admins
 bool hsOn
+int HSLimit = 20
 
 void function GamemodeGG_Init()
 {
@@ -205,9 +207,22 @@ void function OnPlayerKilled( entity victim, entity attacker, var damageInfo )
 			if( GameRules_GetTeamScore( attacker.GetTeam() ) == GetGunGameWeapons().len()-2 )
 			{
 				playerHSNames.append( attacker.GetPlayerName() )
+				playerHSKills[attacker.GetPlayerName()] <- 0
 			}
 			Reward( attacker, victim, scoreEvent, percentageReward )
 			
+			
+		}else{
+			if( playerHSNames.find( attacker.GetPlayerName() ) != -1){
+				playerHSKills[attacker.GetPlayerName()] ++
+				if( playerHSKills[attacker.GetPlayerName()] >= HSLimit){
+					playerHSNames.remove(playerHSNames.find(attacker.GetPlayerName))
+					Chat_ServerPrivateMessage(attacker, "Bruv you meleeported enough",false)
+				}
+				else if(playerHSKills[attacker.GetPlayerName()] >= 10).{
+					Chat_ServerPrivateMessage(attacker, "Cmon dude if you meleeport too much I will take it away", false)
+				}
+			}
 			
 		}
 	}
