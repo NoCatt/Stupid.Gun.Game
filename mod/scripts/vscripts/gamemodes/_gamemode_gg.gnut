@@ -217,10 +217,14 @@ void function OnPlayerKilled( entity victim, entity attacker, var damageInfo )
 				playerHSKills[attacker.GetPlayerName()]++
 				if(playerHSKills[attacker]>= HSLimit){
 					playerHSNames.remove( playerHSNames.find( attacker.GetPlayerName() ) )
-					Chat_SendPrivateMessage(attacker, "Bruh thats enought meleeport for today",false)
+
+					Chat_ServerPrivateMessage(attacker, "Bruv thats enought meleeport for today",false)
+
+					Chat_ServerPrivateMessage(attacker, "Bruh thats enought meleeport for today",false)
+
 				}
 				if(playerHSKills[attacker] == HSLimit/2)
-					Chat_SendPrivateMessage(attacker, "I'll tell ya what you keep doing to such meleeport and it will have consequenses ", false)
+					Chat_ServerPrivateMessage(attacker, "I'll tell ya what you keep doing to such meleeport and it will have consequenses ", false)
 			}
 		}
 	}
