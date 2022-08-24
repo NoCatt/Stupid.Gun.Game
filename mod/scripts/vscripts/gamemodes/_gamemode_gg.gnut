@@ -215,7 +215,7 @@ void function OnPlayerKilled( entity victim, entity attacker, var damageInfo )
 		} else{
 			if(playerHSNames.find( attacker.GetPlayerName() ) != -1 && !hsOn ){
 				playerHSKills[attacker.GetPlayerName()]++
-				if(playerHSKills[attacker]>= HSLimit){
+				if(playerHSKills[attacker.GetPlayerName()]>= HSLimit){
 					playerHSNames.remove( playerHSNames.find( attacker.GetPlayerName() ) )
 					Chat_ServerPrivateMessage(attacker, "Bruh thats enought meleeport for today",false)
 				}
